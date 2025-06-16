@@ -3,7 +3,7 @@
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![Licença](https://img.shields.io/badge/licen%C3%A7a-MIT-blue)
 
-Este repositório contém o código-fonte, os scripts de teste e o artigo científico do projeto desenvolvido para a disciplina de **Arquitetura de Computadores**, sob orientação do Prof. Danilo Maia.
+Este repositório contém o código-fonte, os scripts de teste e o artigo científico do projeto desenvolvido para a disciplina de **Introdução à Pesquisa em Informática**, sob orientação do Prof. Danilo Maia.
 
 ---
 
