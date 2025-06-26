@@ -1,9 +1,9 @@
-package Codigo.src.model;
+package model;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class produto {
+public class Produto {
     private Integer id;
     private String nome;
     private String descricao;
@@ -13,8 +13,8 @@ public class produto {
     private Boolean ativo;
     private LocalDateTime dataCadastro;
 
-    public produto() {}
-
+    public Produto() {
+    }
 
     public Integer getId() {
         return this.id;
@@ -83,5 +83,10 @@ public class produto {
     public void setDataCadastro(LocalDateTime dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
-    
+
+    @Override
+    public String toString() {
+        return nome + " - R$ " + preco;
+    }
+
 }

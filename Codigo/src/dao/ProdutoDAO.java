@@ -8,20 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutoDAO {
-
-    public void inserir(Produto produto) throws Exception {
-        String sql = "INSERT INTO produto (nome, descricao, categoria, preco, quantidade_estoque, ativo) VALUES (?, ?, ?, ?, ?, ?)";
-        try (Connection conn = Conexao.conectar(); PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, produto.getNome());
-            stmt.setString(2, produto.getDescricao());
-            stmt.setString(3, produto.getCategoria());
-            stmt.setBigDecimal(4, produto.getPreco());
-            stmt.setInt(5, produto.getQuantidadeEstoque());
-            stmt.setBoolean(6, produto.getAtivo());
-            stmt.executeUpdate();
-        }
-    }
-
     public List<Produto> listarTodos() throws Exception {
         List<Produto> lista = new ArrayList<>();
         String sql = "SELECT * FROM produto ORDER BY nome ASC";
