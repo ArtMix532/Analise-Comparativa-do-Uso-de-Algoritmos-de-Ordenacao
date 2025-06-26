@@ -7,16 +7,27 @@ import model.Produto;
 
 public class QuickSort {
     private static long comps = 0;
+    private static long elapsed;
 
     public static long getNumeroComparacoes() {
         return comps;
     }
 
     public static void resetarComparacoes() {
-        comps = 0; 
+        comps = 0;
     }
 
-    public static void quickSort(List<Produto> lista, int inicio, int fim) {
+    public static long getTempoExecucao() {
+        return elapsed;
+    }
+
+    public static void quickSort(List<Produto> lista) {
+        long start = System.currentTimeMillis();
+        quickSort(lista, 0, lista.size() - 1);
+        elapsed = System.currentTimeMillis() - start;
+    }
+
+    private static void quickSort(List<Produto> lista, int inicio, int fim) {
         if (inicio < fim) {
             int p = particionar(lista, inicio, fim);
             quickSort(lista, inicio, p - 1);

@@ -10,6 +10,7 @@ import model.Produto;
 
 public class RadixSort {
     private static long comps = 0;
+    private static long elapsed;
 
     public static void resetarComparacoes() {
         comps = 0;
@@ -19,9 +20,15 @@ public class RadixSort {
         return comps;
     }
 
+    public static long getTempoExecucao() {
+        return elapsed; 
+    }
+
     public static void radixSort(List<Produto> lista) {
+        long start = System.currentTimeMillis();
         int n = lista.size();
-        if (n == 0) return; 
+        if (n == 0)
+            return;
 
         int[] precos = new int[n];
         Map<Integer, List<Produto>> map = new HashMap<>();
@@ -39,16 +46,16 @@ public class RadixSort {
         for (int p : precos) {
             lista.add(map.get(p).remove(0));
         }
+        elapsed = System.currentTimeMillis() - start;
     }
 
     private static void radixSortPrecos(int[] arr) {
         int max = Arrays.stream(arr).max().orElse(0);
-        
+
         // Adiciona as N-1 comparações feitas pelo .max()
         if (arr.length > 1) {
             comps += arr.length - 1;
         }
-
 
         for (int exp = 1; max / exp > 0; exp *= 10) {
             countingSort(arr, exp);

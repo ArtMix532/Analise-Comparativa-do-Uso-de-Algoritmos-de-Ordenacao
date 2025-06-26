@@ -7,17 +7,28 @@ import model.Produto;
 
 public class MergeSort {
     private static long comps = 0;
+    private static long elapsed;
 
     public static long getNumeroComparacoes() {
         return comps;
     }
 
     public static void resetarComparacoes() {
-        comps = 0; 
+        comps = 0;
     }
 
-    public static List<Produto> mergeSort(List<Produto> lista) {
+    public static long getTempoExecucao() {
+        return elapsed;
+    }
 
+    public static List<Produto> mergeSortComTempo(List<Produto> lista) {
+        long start = System.currentTimeMillis();
+        List<Produto> resultado = mergeSort(lista);
+        elapsed = System.currentTimeMillis() - start;
+        return resultado;
+    }
+
+    private static List<Produto> mergeSort(List<Produto> lista) {
         if (lista.size() <= 1)
             return lista;
 
@@ -33,7 +44,7 @@ public class MergeSort {
         int i = 0, j = 0;
 
         while (i < esq.size() && j < dir.size()) {
-            comps++; 
+            comps++;
             if (esq.get(i).getPreco().compareTo(dir.get(j).getPreco()) < 0) {
                 resultado.add(esq.get(i++));
             } else {
