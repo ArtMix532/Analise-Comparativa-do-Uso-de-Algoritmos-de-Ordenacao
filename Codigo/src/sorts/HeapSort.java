@@ -6,6 +6,16 @@ import java.util.List;
 import model.Produto;
 
 public class HeapSort {
+    private static long comps = 0;
+
+    public static long getNumeroComparacoes() {
+        return comps;
+    }
+
+    public static void resetarComparacoes() {
+        comps = 0;
+    }
+
     public static void heapSort(List<Produto> lista) {
         int n = lista.size();
         for (int i = n / 2 - 1; i >= 0; i--)
@@ -18,18 +28,27 @@ public class HeapSort {
     }
 
     private static void heapify(List<Produto> lista, int n, int i) {
-        int maior = i;
-        int esq = 2 * i + 1;
-        int dir = 2 * i + 2;
+        int maior = i; 
+        int esq = 2 * i + 1; 
+        int dir = 2 * i + 2; 
 
-        if (esq < n && lista.get(esq).getPreco().compareTo(lista.get(maior).getPreco()) > 0)
+        if (esq < n && lista.get(esq).getPreco().compareTo(lista.get(maior).getPreco()) > 0) {
+            comps++;
             maior = esq;
+        } else if (esq < n) {
+            comps++;
+        }
 
-        if (dir < n && lista.get(dir).getPreco().compareTo(lista.get(maior).getPreco()) > 0)
+        if (dir < n && lista.get(dir).getPreco().compareTo(lista.get(maior).getPreco()) > 0) {
+            comps++;
             maior = dir;
+        } else if (dir < n) {
+            comps++;
+        }
 
         if (maior != i) {
             Collections.swap(lista, i, maior);
+
             heapify(lista, n, maior);
         }
     }
