@@ -1,0 +1,5 @@
+ORDER_BY 
+2500 registros - 16ms
+5000 registros - 31 ms
+7500 registros - 32 ms 
+10.000 registros - 31 ms

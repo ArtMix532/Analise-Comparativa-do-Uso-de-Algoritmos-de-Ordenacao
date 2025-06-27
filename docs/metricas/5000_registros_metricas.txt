@@ -1,0 +1,65 @@
+1x
+--- Resultados para Merge Sort ---
+Memória utilizada: 3874312 bytes (3,6948 MB)
+Tempo de execução: 16
+Número de comparações: 55230
+
+--- Resultados para Heap Sort ---
+Memória utilizada: 301744 bytes (0,2878 MB)
+Tempo de execução: 6
+Número de comparações: 107750
+
+--- Resultados para Quick Sort ---
+Memória utilizada: 241408 bytes (0,2302 MB)
+Tempo de execução: 6
+Número de comparações: 69232
+
+--- Resultados para Radix Sort ---
+Memória utilizada: 2013920 bytes (1,9206 MB)
+Tempo de execução: 17
+Número de comparações: 4999
+
+
+
+
+2x
+--- Resultados para Merge Sort ---
+Memória utilizada: 3874152 bytes (3,6947 MB)
+Tempo de execução: 12
+Número de comparações: 55230
+
+--- Resultados para Heap Sort ---
+Memória utilizada: 301728 bytes (0,2878 MB)
+Tempo de execução: 8
+Número de comparações: 107750
+
+--- Resultados para Quick Sort ---
+Memória utilizada: 241392 bytes (0,2302 MB)
+Tempo de execução: 6
+Número de comparações: 69232
+
+--- Resultados para Radix Sort ---
+Memória utilizada: 2097152 bytes (2,0000 MB)
+Tempo de execução: 22
+Número de comparações: 4999
+
+3x
+--- Resultados para Merge Sort ---
+Memória utilizada: 3872488 bytes (3,6931 MB)
+Tempo de execução: 13
+Número de comparações: 55230
+
+--- Resultados para Heap Sort ---
+Memória utilizada: 241416 bytes (0,2302 MB)
+Tempo de execução: 8
+Número de comparações: 107750
+
+--- Resultados para Quick Sort ---
+Memória utilizada: 241416 bytes (0,2302 MB)
+Tempo de execução: 5
+Número de comparações: 69232
+
+--- Resultados para Radix Sort ---
+Memória utilizada: 2014016 bytes (1,9207 MB)
+Tempo de execução: 24
+Número de comparações: 4999
