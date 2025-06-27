@@ -37,8 +37,7 @@ Este repositório contém o código-fonte, os scripts de teste e o artigo cient�
 1.  **Quick Sort**
 2.  **Heap Sort**
 3.  **Merge Sort**
-4.  **Introspective Sort (Intro Sort)**
-5.  **Radix Sort**
+4.  **Radix Sort**
 
 ---
 
